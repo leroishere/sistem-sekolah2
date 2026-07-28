@@ -35,3 +35,4 @@ class TeacherController extends Controller
         return "menghapus data guru";
     }
 }
+

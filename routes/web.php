@@ -9,6 +9,7 @@ use App\Http\Controllers\SchoolClass\StoreController;
 use App\Http\Controllers\SchoolClass\UpdateController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\MajorController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -65,3 +66,5 @@ Route::name('schoolclasses.')->prefix('schoolclasses')->group(function () {
 
     Route::delete('/{id}', DestroyController::class)->name('destroy');
 });
+
+Route::resource('classes.', MajorController::class);
