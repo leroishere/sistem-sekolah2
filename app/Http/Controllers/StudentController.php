@@ -31,24 +31,26 @@ class StudentController extends Controller
 
         ]);
     }
-    public function show(string $id)
-    {
-        $title = 'Sistem Sekolah - Info Siswa';
-        return view('students.show', [
-            'title'=> $title
-        ]);
-    }
+      
     public function create()
     {
-        $title = 'Sistem Sekolah - Menambah Siswa';
+        $title = 'Sistem Sekolah - Tambah Siswa';
         return view ('students.create', [
             'title'=> $title
         ]);
     }
     public function edit(string $id)
     {
-        $title = 'Sistem Sekolah - mengubah data Siswa';
+        $title = 'Sistem Sekolah - Edit Siswa';
         return view ('students.edit', [
+            'title'=> $title
+        ]);
+    }
+
+     public function show(string $id)
+    {
+        $title = 'Sistem Sekolah - Info Siswa';
+        return view('students.show', [
             'title'=> $title
         ]);
     }
